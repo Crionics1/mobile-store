@@ -1,0 +1,11 @@
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\bin\Debug\netcoreapp2.2\MobileStore.Test.deps.json
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\bin\Debug\netcoreapp2.2\MobileStore.Test.runtimeconfig.json
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\bin\Debug\netcoreapp2.2\MobileStore.Test.runtimeconfig.dev.json
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\bin\Debug\netcoreapp2.2\MobileStore.Test.dll
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\bin\Debug\netcoreapp2.2\MobileStore.Test.pdb
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.csprojAssemblyReference.cache
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.csproj.CoreCompileInputs.cache
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.AssemblyInfoInputs.cache
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.AssemblyInfo.cs
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.dll
+C:\Users\topdo\Desktop\MobileStore\MobileStore.Test\obj\Debug\netcoreapp2.2\MobileStore.Test.pdb

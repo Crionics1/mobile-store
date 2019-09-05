@@ -31,7 +31,7 @@ namespace MobileStore.Service.Services
 
         public async Task<IEnumerable<MobilePhone>> GetAllAsync()
         {
-            return await _repository.GetAll();
+            return await _repository.GetAllAsync();
         }
 
         public async Task<MobilePhone> GetAsync(int id)
@@ -42,7 +42,7 @@ namespace MobileStore.Service.Services
 
         public async Task<IEnumerable<MobilePhone>> GetByManufacturer(Manufacturer manufacturer)
         {
-            var mobile = from m in (await _repository.GetAll())
+            var mobile = from m in (await _repository.GetAllAsync())
                          where m.Manufacturer == manufacturer
                          select m;
             return mobile;

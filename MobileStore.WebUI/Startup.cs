@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MobileStore.Domain.Entities;
 using MobileStore.Repository;
+using MobileStore.Repository.Repositories;
 
 namespace MobileStore.WebUI
 {
@@ -34,7 +35,10 @@ namespace MobileStore.WebUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddTransient<IRepository<MobilePhone>, Repository<MobilePhone>>();
+            services.AddScoped<IRepository<MobilePhone>, MobilePhoneRepository>();
+            services.AddScoped<IRepository<Manufacturer>, Repository<Manufacturer>>();
+            services.AddScoped<IRepository<Visual>, IRepository<Visual>>();
+
             services.AddDbContextPool<MobileDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MobileStore"))
             );

@@ -9,8 +9,8 @@ namespace MobileStore.Repository
 {
     public class Repository<T> : IRepository<T> where T : class, IEntity
     {
-        private MobileDbContext _context;
-        private DbSet<T> _set;
+        protected MobileDbContext _context;
+        protected DbSet<T> _set;
 
         public Repository(MobileDbContext mobileDbContext)
         {
@@ -31,7 +31,7 @@ namespace MobileStore.Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _set.ToListAsync();
         }

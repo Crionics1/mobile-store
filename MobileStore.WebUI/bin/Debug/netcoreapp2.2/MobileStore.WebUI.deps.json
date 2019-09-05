@@ -275,7 +275,8 @@
       },
       "MobileStore.Service/1.0.0": {
         "dependencies": {
-          "MobileStore.Domain": "1.0.0"
+          "MobileStore.Domain": "1.0.0",
+          "MobileStore.Repository": "1.0.0"
         },
         "runtime": {
           "MobileStore.Service.dll": {}

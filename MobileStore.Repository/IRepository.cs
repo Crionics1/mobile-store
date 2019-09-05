@@ -11,6 +11,6 @@ namespace MobileStore.Repository
         Task<T> UpdateAsync(T t);
         Task DeleteAsync(T t);
         Task<T> GetAsync(int id);
-        Task<IEnumerable<T>> GetAll();
+        Task<IEnumerable<T>> GetAllAsync();
     }
 }
