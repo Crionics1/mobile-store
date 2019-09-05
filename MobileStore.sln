@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.Domain", "MobileStore.Domain\MobileStore.Domain.csproj", "{01F107D0-B6ED-4CA1-A815-F1D95CF355F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.Repository", "MobileStore.Repository\MobileStore.Repository.csproj", "{D568D882-A8CB-4206-8784-212945FF41C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.WebUI", "MobileStore.WebUI\MobileStore.WebUI.csproj", "{671309C3-B5B1-47AD-B286-550BBF2DEAC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.Service", "MobileStore.Service\MobileStore.Service.csproj", "{2AE4D9FF-F485-4221-8991-09DBE6305B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileStore.Test", "MobileStore.Test\MobileStore.Test.csproj", "{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01F107D0-B6ED-4CA1-A815-F1D95CF355F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F107D0-B6ED-4CA1-A815-F1D95CF355F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F107D0-B6ED-4CA1-A815-F1D95CF355F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F107D0-B6ED-4CA1-A815-F1D95CF355F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D568D882-A8CB-4206-8784-212945FF41C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D568D882-A8CB-4206-8784-212945FF41C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D568D882-A8CB-4206-8784-212945FF41C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D568D882-A8CB-4206-8784-212945FF41C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671309C3-B5B1-47AD-B286-550BBF2DEAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671309C3-B5B1-47AD-B286-550BBF2DEAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671309C3-B5B1-47AD-B286-550BBF2DEAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671309C3-B5B1-47AD-B286-550BBF2DEAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE4D9FF-F485-4221-8991-09DBE6305B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE4D9FF-F485-4221-8991-09DBE6305B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE4D9FF-F485-4221-8991-09DBE6305B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE4D9FF-F485-4221-8991-09DBE6305B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E5864E-E087-46A9-B814-CED40937DB1E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,264 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.WebUI\\MobileStore.WebUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj",
+        "projectName": "MobileStore.Domain",
+        "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\topdo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\topdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj",
+        "projectName": "MobileStore.Repository",
+        "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj",
+        "packagesPath": "C:\\Users\\topdo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\topdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj",
+        "projectName": "MobileStore.Service",
+        "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj",
+        "packagesPath": "C:\\Users\\topdo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\topdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj"
+              },
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.WebUI\\MobileStore.WebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.WebUI\\MobileStore.WebUI.csproj",
+        "projectName": "MobileStore.WebUI",
+        "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.WebUI\\MobileStore.WebUI.csproj",
+        "packagesPath": "C:\\Users\\topdo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.WebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\topdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj"
+              },
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj"
+              },
+              "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj": {
+                "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
