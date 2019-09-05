@@ -38,7 +38,7 @@ namespace MobileStore.Repository
 
         public async Task<T> GetAsync(int id)
         {
-            return await _set.FirstOrDefaultAsync(t => t.ID == id);
+            return await _set.SingleOrDefaultAsync(t => t.ID == id);
         }
 
         public async Task<T> UpdateAsync(T t)

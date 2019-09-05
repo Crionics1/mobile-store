@@ -18,15 +18,15 @@ namespace MobileStore.Service.Services
             _repository = repository;
         }
 
-        public async Task<MobilePhone> CreateAsync(MobilePhone t)
+        public async Task<MobilePhone> CreateAsync(MobilePhone mob)
         {
-            var mobile = await _repository.CreateAsync(t);
+            var mobile = await _repository.CreateAsync(mob);
             return mobile;
         }
 
-        public async Task DeleteAsync(MobilePhone t)
+        public async Task DeleteAsync(MobilePhone mob)
         {
-            await _repository.DeleteAsync(t);
+            await _repository.DeleteAsync(mob);
         }
 
         public async Task<IEnumerable<MobilePhone>> GetAllAsync()
@@ -72,9 +72,9 @@ namespace MobileStore.Service.Services
             return mobile;
         }
 
-        public async Task<MobilePhone> UpdateAsync(MobilePhone t)
+        public async Task<MobilePhone> UpdateAsync(MobilePhone mob)
         {
-            var mobile = await _repository.UpdateAsync(t);
+            var mobile = await _repository.UpdateAsync(mob);
             return mobile;
         }
     }
