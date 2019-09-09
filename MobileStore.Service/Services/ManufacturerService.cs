@@ -4,10 +4,11 @@ using MobileStore.Service.InterFaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
+using MobileStore.Repository.Interfaces;
 
 namespace MobileStore.Service.Services
 {
-    class ManufacturerService : IManufacturerService
+    public class ManufacturerService : IManufacturerService
     {
         private IRepository<Manufacturer> _repository;
         private IMobilePhoneService _mobilePhoneService;
@@ -34,9 +35,9 @@ namespace MobileStore.Service.Services
             await _repository.DeleteAsync(manufacturer);
         }
 
-        public async Task<IEnumerable<Manufacturer>> GetAllAsync()
+        public IQueryable<Manufacturer> GetAll()
         {
-            return await _repository.GetAll();
+            return _repository.GetAll();
         }
 
         public async Task<Manufacturer> GetAsync(int id)
@@ -44,10 +45,10 @@ namespace MobileStore.Service.Services
             return await _repository.GetAsync(id);
         }
 
-        public async Task<IEnumerable<MobilePhone>> GetMobilePhonesByManufacturer(Manufacturer manufacturer)
+        public IQueryable<MobilePhone> GetMobilePhonesByManufacturer(int manufacturerID)
         {
-            var mobiles = from x in (await _mobilePhoneService.GetAllAsync())
-                          where x.ManufacturerID == manufacturer.ID
+            var mobiles = from x in _mobilePhoneService.GetAll()
+                          where x.ManufacturerID == manufacturerID
                           select x;
             return mobiles;
         } 

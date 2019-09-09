@@ -1,15 +1,18 @@
 ﻿using MobileStore.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MobileStore.Service.InterFaces
 {
-    interface IMobilePhoneService : IService<MobilePhone>
+    public interface IMobilePhoneService : IService<MobilePhone>
     {
-        Task<IEnumerable<MobilePhone>> GetByName(string name);
-        Task<IEnumerable<MobilePhone>> GetByManufacturer(Manufacturer manufacturer);
-        Task<IEnumerable<MobilePhone>> GetByPrice(decimal startPrice, decimal endPrice, bool descending);
+        IQueryable<MobilePhone> GetAll(bool includeManufacturer, bool includeVisuals);
+        IQueryable<MobilePhone> GetByName(string name);
+        IQueryable<MobilePhone> GetByManufacturer(ref IQueryable<MobilePhone> queryable,int manufacturerID);
+        IQueryable<MobilePhone> GetByPrice(ref IQueryable<MobilePhone> queryable, decimal? startPrice, decimal? endPrice);
+        IQueryable<MobilePhone> Search(string name, decimal? startPrice, decimal? endPrice, int manufacturerID = 0);
     }
 }

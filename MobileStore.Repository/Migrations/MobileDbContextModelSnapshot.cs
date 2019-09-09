@@ -26,6 +26,7 @@ namespace MobileStore.Repository.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnName("Name")
                         .HasMaxLength(50);
 
                     b.HasKey("ID");
@@ -47,6 +48,11 @@ namespace MobileStore.Repository.Migrations
 
                     b.Property<string>("Memory")
                         .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnName("Name")
                         .HasMaxLength(50);
 
                     b.Property<string>("OS")

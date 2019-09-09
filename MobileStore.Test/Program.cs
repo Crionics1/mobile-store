@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MobileStore.Repository.Interfaces;
+using MobileStore.Repository.Repositories;
+using System;
 
 namespace MobileStore.Test
 {
@@ -6,7 +8,7 @@ namespace MobileStore.Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

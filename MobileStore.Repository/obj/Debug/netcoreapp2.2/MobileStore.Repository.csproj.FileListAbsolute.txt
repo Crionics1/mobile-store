@@ -12,3 +12,17 @@ C:\Users\topdo\Desktop\MobileStore\MobileStore.Repository\obj\Debug\netcoreapp2.
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.pdb
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.runtimeconfig.json
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.runtimeconfig.dev.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.deps.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.runtimeconfig.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.runtimeconfig.dev.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Repository.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Domain.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\bin\Debug\netcoreapp2.2\MobileStore.Domain.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.csprojAssemblyReference.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.csproj.CoreCompileInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.AssemblyInfoInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.AssemblyInfo.cs
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.csproj.CopyComplete
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Repository\obj\Debug\netcoreapp2.2\MobileStore.Repository.pdb

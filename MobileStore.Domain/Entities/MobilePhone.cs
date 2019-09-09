@@ -12,11 +12,12 @@ namespace MobileStore.Domain.Entities
         public int ID { get; set; }
         [Required]
         [MaxLength(50)]
+        [Column("Name")]
         public string Name { get; set; }
         [Required]
         public int ManufacturerID { get; set; }
         public Manufacturer Manufacturer { get; set; }
-        public List<Visual> Visuals { get; set; }
+        public IEnumerable<Visual> Visuals { get; set; }
         [MaxLength(50)]
         public string Size { get; set; }
         [Required]

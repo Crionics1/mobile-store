@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MobileStore.Domain.Entities;
+using MobileStore.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,9 +33,9 @@ namespace MobileStore.Repository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public IQueryable<T> GetAll()
         {
-            return await _set.ToListAsync();
+            return _set;
         }
 
         public async Task<T> GetAsync(int id)

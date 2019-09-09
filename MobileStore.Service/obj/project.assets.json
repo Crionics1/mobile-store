@@ -3619,11 +3619,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj",
+      "projectUniqueName": "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Service\\MobileStore.Service.csproj",
       "projectName": "MobileStore.Service",
-      "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\MobileStore.Service.csproj",
+      "projectPath": "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Service\\MobileStore.Service.csproj",
       "packagesPath": "C:\\Users\\topdo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Service\\obj\\",
+      "outputPath": "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3642,11 +3642,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Domain\\MobileStore.Domain.csproj"
+            "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Domain\\MobileStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Domain\\MobileStore.Domain.csproj"
             },
-            "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\topdo\\Desktop\\MobileStore\\MobileStore.Repository\\MobileStore.Repository.csproj"
+            "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Repository\\MobileStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\topdo\\Desktop\\mobile-store\\MobileStore.Repository\\MobileStore.Repository.csproj"
             }
           }
         }

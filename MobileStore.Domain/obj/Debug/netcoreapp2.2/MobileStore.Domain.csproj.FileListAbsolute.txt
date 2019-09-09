@@ -7,3 +7,12 @@ C:\Users\topdo\Desktop\MobileStore\MobileStore.Domain\obj\Debug\netcoreapp2.2\Mo
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.AssemblyInfo.cs
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.dll
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\bin\Debug\netcoreapp2.2\MobileStore.Domain.deps.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\bin\Debug\netcoreapp2.2\MobileStore.Domain.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\bin\Debug\netcoreapp2.2\MobileStore.Domain.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.csprojAssemblyReference.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.AssemblyInfoInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.AssemblyInfo.cs
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Domain\obj\Debug\netcoreapp2.2\MobileStore.Domain.pdb

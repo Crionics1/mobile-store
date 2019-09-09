@@ -1,0 +1,80 @@
+﻿@model MobileStore.Domain.Entities.MobilePhone
+
+<div>
+    <h4>MobilePhone</h4>
+    <hr />
+    <div class="container">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Size)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Size)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Weight)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Weight)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DisplayResolution)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DisplayResolution)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Processor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Processor)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Memory)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Memory)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Ram)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Ram)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.OS)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.OS)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+        </dl>
+        <div>
+            @foreach (var visual in Model.Visuals)
+            {
+                if (visual.Path.EndsWith(".mp4"))
+                {
+                    <video src="@visual.Path"></video>
+                }
+                else
+                {
+                    <img src="@visual.Path" />
+                }
+            }
+        </div>
+
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>

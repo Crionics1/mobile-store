@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.WebUI", "Mobile
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.Service", "MobileStore.Service\MobileStore.Service.csproj", "{2AE4D9FF-F485-4221-8991-09DBE6305B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileStore.Test", "MobileStore.Test\MobileStore.Test.csproj", "{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileStore.Test", "MobileStore.Test\MobileStore.Test.csproj", "{4B5CD0E3-E545-4F2C-BF32-47B5873216A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

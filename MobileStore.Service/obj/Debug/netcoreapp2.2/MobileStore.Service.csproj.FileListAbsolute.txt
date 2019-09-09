@@ -10,3 +10,17 @@ C:\Users\topdo\Desktop\MobileStore\MobileStore.Service\obj\Debug\netcoreapp2.2\M
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.csproj.CopyComplete
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.dll
 C:\Users\topdo\Desktop\MobileStore\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.csprojAssemblyReference.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.csproj.CoreCompileInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.AssemblyInfoInputs.cache
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.AssemblyInfo.cs
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Service.deps.json
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Service.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Service.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Domain.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Repository.dll
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Domain.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\bin\Debug\netcoreapp2.2\MobileStore.Repository.pdb
+C:\Users\topdo\Desktop\mobile-store\MobileStore.Service\obj\Debug\netcoreapp2.2\MobileStore.Service.csproj.CopyComplete

@@ -1,18 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using MobileStore.Domain.Entities;
 using MobileStore.Repository;
+using MobileStore.Repository.Interfaces;
 using MobileStore.Repository.Repositories;
+using MobileStore.Service.InterFaces;
+using MobileStore.Service.Services;
 
 namespace MobileStore.WebUI
 {
@@ -35,13 +41,17 @@ namespace MobileStore.WebUI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddScoped<IRepository<MobilePhone>, MobilePhoneRepository>();
+            services.AddScoped<IRepository<Visual>, Repository<Visual>>();
+            services.AddScoped<IMobilePhoneRepository, MobilePhoneRepository>();
             services.AddScoped<IRepository<Manufacturer>, Repository<Manufacturer>>();
-            services.AddScoped<IRepository<Visual>, IRepository<Visual>>();
+            services.AddScoped<IService<Visual>, VisualService>();
+            services.AddScoped<IMobilePhoneService, MobilePhoneService>();
+            services.AddScoped<IManufacturerService, ManufacturerService>();
 
             services.AddDbContextPool<MobileDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MobileStore"))
             );
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -60,6 +70,13 @@ namespace MobileStore.WebUI
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), "Visuals")),
+                RequestPath = "/Visuals"
+            });
+
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

@@ -7,13 +7,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using MobileStore.Repository.Interfaces;
+using MobileStore.Repository.Repositories;
 
 namespace MobileStore.Service.Services
 {
-    class MobilePhoneService : IMobilePhoneService
+    public class MobilePhoneService : IMobilePhoneService
     {
-        private IRepository<MobilePhone> _repository;
-        public MobilePhoneService(IRepository<MobilePhone> repository)
+        private IMobilePhoneRepository _repository;
+        public MobilePhoneService(IMobilePhoneRepository repository)
         {
             _repository = repository;
         }
@@ -29,9 +31,14 @@ namespace MobileStore.Service.Services
             await _repository.DeleteAsync(mob);
         }
 
-        public async Task<IEnumerable<MobilePhone>> GetAllAsync()
+        public IQueryable<MobilePhone> GetAll()
         {
-            return await _repository.GetAllAsync();
+            return _repository.GetAll();
+        }
+
+        public IQueryable<MobilePhone> GetAll(bool includeManufacturer, bool includeVisuals)
+        {
+            return _repository.GetAll(includeManufacturer, includeVisuals);
         }
 
         public async Task<MobilePhone> GetAsync(int id)
@@ -40,42 +47,59 @@ namespace MobileStore.Service.Services
             return mobile;
         }
 
-        public async Task<IEnumerable<MobilePhone>> GetByManufacturer(Manufacturer manufacturer)
+        public IQueryable<MobilePhone> GetByManufacturer(ref IQueryable<MobilePhone> queryable, int manufacturerID)
         {
-            var mobile = from m in (await _repository.GetAllAsync())
-                         where m.Manufacturer == manufacturer
-                         select m;
-            return mobile;
+            queryable = from m in queryable
+                        where m.Manufacturer.ID == manufacturerID
+                        select m;
+            return queryable;
         }
 
-        public async Task<IEnumerable<MobilePhone>> GetByName(string name)
+        public IQueryable<MobilePhone> GetByName(string name)
         {
-            IEnumerable<MobilePhone> mobile = from m in (await _repository.GetAll())
-                                              where m.Name.StartsWith(name) || string.IsNullOrEmpty(name)
-                                              orderby m.Name
-                                              select m;
+            var mobiles = from m in _repository.GetAll(true, true)
+                          where m.Name.StartsWith(name) || string.IsNullOrEmpty(name)
+                          orderby m.Name
+                          select m;
 
-            return mobile;
+            return mobiles;
         }
 
-        public async Task<IEnumerable<MobilePhone>> GetByPrice(decimal startPrice = 0, decimal endPrice = decimal.MaxValue, bool descending = false)
+        public IQueryable<MobilePhone> GetByPrice(ref IQueryable<MobilePhone> queryable, decimal? startPrice, decimal? endPrice)
         {
-            IEnumerable<MobilePhone> mobile = from m in (await _repository.GetAll())
-                                              where m.Price >= startPrice && m.Price <= endPrice
-                                              orderby m.Price
-                                              select m;
-            if (descending)
+            if (startPrice == null)
             {
-                mobile.OrderByDescending(m => m.Price);
+                startPrice = 0;
             }
-
-            return mobile;
+            if (endPrice == null)
+            {
+                endPrice = decimal.MaxValue;
+            }
+            queryable = from m in queryable
+                        where m.Price >= startPrice && m.Price <= endPrice
+                        orderby m.Price
+                        select m;
+            return queryable;
         }
 
         public async Task<MobilePhone> UpdateAsync(MobilePhone mob)
         {
             var mobile = await _repository.UpdateAsync(mob);
             return mobile;
+        }
+
+        public IQueryable<MobilePhone> Search(string name, decimal? startPrice, decimal? endPrice, int manufacturerID = 0)
+        {
+            var items = GetByName(name);
+            if (startPrice != null || endPrice != null)
+            {
+                GetByPrice(ref items, startPrice, endPrice);
+            }
+            if (manufacturerID != 0)
+            {
+                GetByManufacturer(ref items, manufacturerID);
+            }
+            return items;
         }
     }
 }

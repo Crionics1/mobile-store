@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MobileStore.Repository
+namespace MobileStore.Repository.Interfaces
 {
     public interface IRepository<T>
     {
@@ -11,6 +12,6 @@ namespace MobileStore.Repository
         Task<T> UpdateAsync(T t);
         Task DeleteAsync(T t);
         Task<T> GetAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
+        IQueryable<T> GetAll();
     }
 }

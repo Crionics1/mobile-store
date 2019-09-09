@@ -1,0 +1,56 @@
+﻿@model MobileStore.WebUI.Paging.PaginatedList<MobileStore.Domain.Entities.MobilePhone>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div style="display: flex">
+    <div>
+        @await Component.InvokeAsync("MobilePhoneSearch")
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var phone in Model)
+            {
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        @if (phone.Visuals.FirstOrDefault() != null)
+                        {
+                            <img class="img-responsive" src="@phone.Visuals.FirstOrDefault(v => v.Path.Contains("Thumbnail")).Path" />
+                        }
+                        <p class="text-center">@phone.Name</p>
+                        <a class="btn btn-primary center-block" asp-controller="MobilePhones" asp-action="Details" asp-route-id="@phone.ID">@phone.Price</a>
+                    </div>
+                </div>
+            }
+        </div>
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageIndex - 1)"
+           asp-route-name="@ViewData["name"]"
+           asp-route-startPrice="@ViewData["startPrice"]"
+           asp-route-endPrice="@ViewData["endPrice"]"
+           asp-route-manufacturerID="@ViewData["manufacturerID"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageIndex + 1)"
+           asp-route-name="@ViewData["name"]"
+           asp-route-startPrice="@ViewData["startPrice"]"
+           asp-route-endPrice="@ViewData["endPrice"]"
+           asp-route-manufacturerID="@ViewData["manufacturerID"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+
+</div>
+
