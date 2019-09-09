@@ -29,7 +29,7 @@ namespace MobileStore.WebUI.Controllers
             if (name == null && startPrice == null && endPrice == null && manufacturerID == 0)
             {
                 var items = _service.GetAll(true, true);
-                var model = await PaginatedList<MobilePhone>.CreateAsync(items, page, 2);
+                var model = await PaginatedList<MobilePhone>.CreateAsync(items, page, 6);
                 return View(model);
             }
 
@@ -39,7 +39,7 @@ namespace MobileStore.WebUI.Controllers
             ViewData["manufacturerID"] = manufacturerID;
 
             var filteredItems = _service.Search(name, startPrice, endPrice, manufacturerID);
-            var filteredModel = await PaginatedList<MobilePhone>.CreateAsync(filteredItems, page, 2);
+            var filteredModel = await PaginatedList<MobilePhone>.CreateAsync(filteredItems, page, 6);
 
             return View("Index", filteredModel);
         }
@@ -47,47 +47,45 @@ namespace MobileStore.WebUI.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var item = await _service.GetAsync(id);
-            var visuals = _visualService.GetAll().Where(v => v.MobilePhoneID == id);
-            item.Visuals = visuals;
             return View(item);
         }
 
-        public async Task<IActionResult> Edit(int id)
-        {
-            var mobile = await _service.GetAsync(id);
-            return View(mobile);
-        }
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    var mobile = await _service.GetAsync(id);
+        //    return View(mobile);
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(MobilePhone mobilePhone, List<IFormFile> files)
-        {
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(MobilePhone mobilePhone, List<IFormFile> files)
+        //{
 
-            long size = files.Sum(f => f.Length);
+        //    long size = files.Sum(f => f.Length);
 
-            var file = Path.GetFileNameWithoutExtension(Path.GetTempFileName());
-            var filePath = Path.Combine(new string[] { "~/", "visuals", file });
+        //    var file = Path.GetFileNameWithoutExtension(Path.GetTempFileName());
+        //    var filePath = Path.Combine(new string[] { "~/", "visuals", file });
 
-            foreach (var formFile in files)
-            {
-                if (formFile.Length > 0)
-                {
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await formFile.CopyToAsync(stream);
-                    }
-                }
-            }
+        //    foreach (var formFile in files)
+        //    {
+        //        if (formFile.Length > 0)
+        //        {
+        //            using (var stream = new FileStream(filePath, FileMode.Create))
+        //            {
+        //                await formFile.CopyToAsync(stream);
+        //            }
+        //        }
+        //    }
 
-            try
-            {
-                await _service.UpdateAsync(mobilePhone);
-                return RedirectToAction("Details", mobilePhone.ID);
-            }
-            catch (Exception)
-            {
-                return View("Error");
-            }
-        }
+        //    try
+        //    {
+        //        await _service.UpdateAsync(mobilePhone);
+        //        return RedirectToAction("Details", mobilePhone.ID);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return View("Error");
+        //    }
+        //}
     }
 }

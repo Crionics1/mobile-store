@@ -1,13 +1,6 @@
 ﻿@model MobileStore.WebUI.Paging.PaginatedList<MobileStore.Domain.Entities.MobilePhone>
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h2>Index</h2>
-
-<div style="display: flex">
+<div style="display: flex;margin-top:20px">
     <div>
         @await Component.InvokeAsync("MobilePhoneSearch")
     </div>
@@ -17,9 +10,9 @@
             {
                 <div class="col-md-4">
                     <div class="thumbnail">
-                        @if (phone.Visuals.FirstOrDefault() != null)
+                        @if (phone.Visuals.Count() > 0)
                         {
-                            <img class="img-responsive" src="@phone.Visuals.FirstOrDefault(v => v.Path.Contains("Thumbnail")).Path" />
+                            <img class="img-responsive" src="@phone.Visuals.FirstOrDefault().Path" />
                         }
                         <p class="text-center">@phone.Name</p>
                         <a class="btn btn-primary center-block" asp-controller="MobilePhones" asp-action="Details" asp-route-id="@phone.ID">@phone.Price</a>

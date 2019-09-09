@@ -1,22 +1,26 @@
-﻿@model MobileStore.WebUI.Models.UserModel
+﻿@model MobileStore.WebUI.Models.MobileSearchModel
 @{
     <form asp-controller="MobilePhones" asp-action="Index" method="get">
         <div class="form-group">
-            <div class="input-group">
-                <input type="search" class="form-control"
-                       asp-for="Name" />
-                <select class="form-control"
-                        asp-for="ManufacturerID" asp-items="Model.Manufacturers"></select>
-                <input type="search" class="form-control"
-                       asp-for="StartPrice" />
-                <input type="search" class="form-control"
-                       asp-for="EndPrice" />
-                <span class="input-group-btn">
-                    <button class="btn btn-default">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                </span>
-            </div>
+            <input type="search" class="form-control" placeholder="დასახელება"
+                   asp-for="Name" />
         </div>
+        <div class="form-group">
+            <select class="form-control"
+                    asp-for="ManufacturerID" asp-items="Model.Manufacturers"></select>
+        </div>
+        <div class="form-group" style="display:flex;align-items:center">
+            <input type="search" class="form-control" style="width:45%" placeholder="ფასი-დან"
+                   asp-for="StartPrice" />
+            <label style="margin:auto"> - </label>
+            <input type="search" class="form-control" style="width:45%" placeholder="ფასი-მდე"
+                   asp-for="EndPrice" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default center-block" style="width:80%">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </div>
+
     </form>
 }

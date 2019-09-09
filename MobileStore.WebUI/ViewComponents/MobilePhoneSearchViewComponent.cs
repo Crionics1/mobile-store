@@ -10,7 +10,7 @@ namespace MobileStore.WebUI.ViewComponents
     {
         private IManufacturerService _manufacturerService;
         [BindProperty]
-        public UserModel UserModel { get; set; }
+        public MobileSearchModel MobileSearchModel { get; set; }
 
         public MobilePhoneSearchViewComponent(IManufacturerService manufacturerService)
         {
@@ -28,12 +28,12 @@ namespace MobileStore.WebUI.ViewComponents
             var list = manufacturers.ToList();
             list.Insert(0, new SelectListItem
             {
-                Text = "Select Manufacturer",
+                Text = "მწარმოებელი",
                 Value = "0"
             });
 
-            UserModel = new UserModel(list);
-            return View("_Default", UserModel);
+            MobileSearchModel = new MobileSearchModel(list);
+            return View("_Default", MobileSearchModel);
         }
     }
 }

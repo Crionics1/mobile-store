@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MobileStore.WebUI.Models
 {
-    public class UserModel
+    public class MobileSearchModel
     {
         [BindProperty]
         public List<SelectListItem> Manufacturers { get; private set; }
@@ -23,7 +23,7 @@ namespace MobileStore.WebUI.Models
         [BindProperty]
         public int ManufacturerID { get; set; }
 
-        public UserModel(List<SelectListItem> manufacturers)
+        public MobileSearchModel(List<SelectListItem> manufacturers)
         {
             Manufacturers = manufacturers;
         }

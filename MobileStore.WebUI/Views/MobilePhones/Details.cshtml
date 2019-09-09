@@ -1,9 +1,9 @@
 ﻿@model MobileStore.Domain.Entities.MobilePhone
 
 <div>
-    <h4>MobilePhone</h4>
+    <h4>@Model.Name</h4>
     <hr />
-    <div class="container">
+    <div style="display:flex">
         <dl class="dl-horizontal">
             <dt>
                 @Html.DisplayNameFor(model => model.Name)
@@ -60,21 +60,27 @@
                 @Html.DisplayFor(model => model.Price)
             </dd>
         </dl>
-        <div>
-            @foreach (var visual in Model.Visuals)
-            {
-                if (visual.Path.EndsWith(".mp4"))
+        <div class="container">
+            <div class="row">
+                @foreach (var visual in Model.Visuals)
                 {
-                    <video src="@visual.Path"></video>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            @if (visual.Path.EndsWith(".mp4"))
+                            {
+                            <video src="@visual.Path" class="img-responsive"></video>
+                            }
+                            else
+                            {
+                            <img src="@visual.Path" class="img-responsive" />
+                            }
+                        </div>
+                    </div>
                 }
-                else
-                {
-                    <img src="@visual.Path" />
-                }
-            }
+            </div>
         </div>
-
     </div>
     <div>
         <a asp-action="Index">Back to List</a>
     </div>
+</div>
