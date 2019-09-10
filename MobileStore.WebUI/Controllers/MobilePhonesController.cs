@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MobileStore.Domain.Entities;
-using MobileStore.Repository;
-using MobileStore.Repository.Interfaces;
 using MobileStore.Service.InterFaces;
 using MobileStore.WebUI.Paging;
 

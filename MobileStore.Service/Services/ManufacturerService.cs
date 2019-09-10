@@ -1,7 +1,5 @@
 ﻿using MobileStore.Domain.Entities;
-using MobileStore.Repository;
 using MobileStore.Service.InterFaces;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using MobileStore.Repository.Interfaces;

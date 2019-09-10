@@ -1,14 +1,8 @@
 ﻿using MobileStore.Domain.Entities;
-using MobileStore.Repository;
 using MobileStore.Service.InterFaces;
 using System.Linq;
-using System.Linq.Expressions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using MobileStore.Repository.Interfaces;
-using MobileStore.Repository.Repositories;
 
 namespace MobileStore.Service.Services
 {
