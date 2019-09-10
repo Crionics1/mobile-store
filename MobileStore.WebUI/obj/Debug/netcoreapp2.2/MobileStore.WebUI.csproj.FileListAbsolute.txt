@@ -74,3 +74,4 @@ C:\Users\topdo\Desktop\mobile-store\MobileStore.WebUI\obj\Debug\netcoreapp2.2\Ra
 C:\Users\topdo\Desktop\mobile-store\MobileStore.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MobilePhoneSearch\_Default.g.cshtml.cs
 C:\Users\topdo\Desktop\mobile-store\MobileStore.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\MobilePhones\Details.g.cshtml.cs
 C:\Users\topdo\Desktop\mobile-store\MobileStore.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\MobilePhones\Edit.g.cshtml.cs
+C:\Users\topdo\Desktop\mobile-store\MobileStore.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Shared\NotFound.g.cshtml.cs

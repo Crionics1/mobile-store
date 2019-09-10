@@ -47,6 +47,10 @@ namespace MobileStore.WebUI.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var item = await _service.GetAsync(id);
+            if (item == null)
+            {
+                return View("NotFound");
+            }
             return View(item);
         }
 
