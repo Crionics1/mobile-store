@@ -3,6 +3,7 @@ using MobileStore.Service.InterFaces;
 using System.Threading.Tasks;
 using System.Linq;
 using MobileStore.Repository.Interfaces;
+using MobileStore.Service.Exceptions;
 
 namespace MobileStore.Service.Services
 {
@@ -10,27 +11,48 @@ namespace MobileStore.Service.Services
     {
         private IRepository<Manufacturer> _repository;
         private IMobilePhoneService _mobilePhoneService;
-        public ManufacturerService(IRepository<Manufacturer> repository,IMobilePhoneService mobilePhoneService)
+        public ManufacturerService(IRepository<Manufacturer> repository, IMobilePhoneService mobilePhoneService)
         {
             _repository = repository;
             _mobilePhoneService = mobilePhoneService;
         }
 
-        public async Task<Manufacturer> CreateAsync(Manufacturer manufacturer)
+        public Manufacturer Create(Manufacturer manufacturer)
         {
-            var manuf = await _repository.CreateAsync(manufacturer);
-            return manuf;
+            var manuf = _repository.Create(manufacturer);
+            if (_repository.SaveChanges())
+            {
+                return manuf;
+            }
+            throw new BadRequestException("Failed to craete Manufacturer");
         }
 
-        public async Task<Manufacturer> UpdateAsync(Manufacturer manufacturer)
+        public Manufacturer Update(Manufacturer manufacturer)
         {
-            var manuf = await _repository.UpdateAsync(manufacturer);
-            return manuf;
+            var manuf = _repository.Get(manufacturer.ID);
+            if (manuf == null)
+            {
+                throw new BadRequestException("Failed to find Manufacturer to update!");
+            }
+
+            manuf = manufacturer;
+            if (_repository.SaveChanges())
+            {
+                return manuf;
+            }
+            throw new BadRequestException("No changes to update");
         }
 
-        public async Task DeleteAsync(Manufacturer manufacturer)
+        public void Delete(int id)
         {
-            await _repository.DeleteAsync(manufacturer);
+            var manufacturer = _repository.Get(id);
+            if (manufacturer == null)
+            {
+                throw new BadRequestException("Failed to find Manufacturer to delete!");
+            }
+
+            _repository.Delete(manufacturer);
+            _repository.SaveChanges();
         }
 
         public IQueryable<Manufacturer> GetAll()
@@ -38,9 +60,9 @@ namespace MobileStore.Service.Services
             return _repository.GetAll();
         }
 
-        public async Task<Manufacturer> GetAsync(int id)
+        public Manufacturer Get(int id)
         {
-            return await _repository.GetAsync(id);
+            return _repository.Get(id);
         }
 
         public IQueryable<MobilePhone> GetMobilePhonesByManufacturer(int manufacturerID)
@@ -49,6 +71,6 @@ namespace MobileStore.Service.Services
                           where x.ManufacturerID == manufacturerID
                           select x;
             return mobiles;
-        } 
+        }
     }
 }

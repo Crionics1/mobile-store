@@ -14,14 +14,20 @@ namespace MobileStore.Service.Services
         {
             _repository = repository;
         }
-        public async Task<Visual> CreateAsync(Visual t)
-        {
-            return await _repository.CreateAsync(t);
-        }
 
-        public Task DeleteAsync(Visual t)
+        public Visual Create(Visual t)
         {
             throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Visual Get(int id)
+        {
+            return _repository.Get(id);
         }
 
         public IQueryable<Visual> GetAll()
@@ -29,12 +35,7 @@ namespace MobileStore.Service.Services
             return _repository.GetAll();
         }
 
-        public async Task<Visual> GetAsync(int id)
-        {
-            return await _repository.GetAsync(id);
-        }
-
-        public Task<Visual> UpdateAsync(Visual t)
+        public Visual Update(Visual t)
         {
             throw new NotImplementedException();
         }

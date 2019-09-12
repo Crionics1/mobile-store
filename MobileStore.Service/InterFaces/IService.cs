@@ -5,10 +5,10 @@ namespace MobileStore.Service.InterFaces
 {
     public interface IService<T>
     {
-        Task<T> CreateAsync(T t);
-        Task<T> UpdateAsync(T t);
-        Task DeleteAsync(T t);
-        Task<T> GetAsync(int id);
+        T Create(T t);
+        T Update(T t);
+        void Delete(int id);
+        T Get(int id);
         IQueryable<T> GetAll();
     }
 }

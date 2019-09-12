@@ -3,6 +3,7 @@ using MobileStore.Service.InterFaces;
 using System.Linq;
 using System.Threading.Tasks;
 using MobileStore.Repository.Interfaces;
+using MobileStore.Service.Exceptions;
 
 namespace MobileStore.Service.Services
 {
@@ -14,15 +15,26 @@ namespace MobileStore.Service.Services
             _repository = repository;
         }
 
-        public async Task<MobilePhone> CreateAsync(MobilePhone mob)
+        public MobilePhone Create(MobilePhone mob)
         {
-            var mobile = await _repository.CreateAsync(mob);
-            return mobile;
+            var mobile = _repository.Create(mob);
+            if (_repository.SaveChanges())
+            {
+                return mobile;
+            }
+            throw new BadRequestException("Failed to create mobile phone!");
         }
 
-        public async Task DeleteAsync(MobilePhone mob)
+        public void Delete(int id)
         {
-            await _repository.DeleteAsync(mob);
+            var mobile = _repository.Get(id);
+            if (mobile == null)
+            {
+                throw new BadRequestException("Failed to find mobile phone to delete!");
+            }
+
+            _repository.Delete(mobile);
+            _repository.SaveChanges();
         }
 
         public IQueryable<MobilePhone> GetAll()
@@ -35,9 +47,9 @@ namespace MobileStore.Service.Services
             return _repository.GetAll(includeManufacturer, includeVisuals);
         }
 
-        public async Task<MobilePhone> GetAsync(int id)
+        public MobilePhone Get(int id)
         {
-            var mobile = await _repository.GetAsync(id);
+            var mobile = _repository.Get(id);
             return mobile;
         }
 
@@ -76,10 +88,21 @@ namespace MobileStore.Service.Services
             return queryable;
         }
 
-        public async Task<MobilePhone> UpdateAsync(MobilePhone mob)
+        public MobilePhone Update(MobilePhone mob)
         {
-            var mobile = await _repository.UpdateAsync(mob);
-            return mobile;
+            var mobile = _repository.Get(mob.ID);
+            if (mobile == null)
+            {
+                throw new BadRequestException("Failed to find mobile to update");
+            }
+
+            mobile = mob;
+            if (_repository.SaveChanges())
+            {
+                return mobile;
+            }
+
+            throw new BadRequestException("No changes to update");
         }
 
         public IQueryable<MobilePhone> Search(string name, decimal? startPrice, decimal? endPrice, int manufacturerID = 0)

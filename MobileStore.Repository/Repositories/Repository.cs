@@ -17,34 +17,30 @@ namespace MobileStore.Repository
             _set = _context.Set<T>();
         }
 
-        public async Task<T> CreateAsync(T t)
+        public T Create(T t)
         {
             var entity = _set.Add(t);
-            await _context.SaveChangesAsync();
             return entity.Entity;
         }
 
-        public async Task DeleteAsync(T t)
+        public void Delete(T t)
         {
             _set.Remove(t);
-            await _context.SaveChangesAsync();
         }
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return _set;
         }
 
-        public async Task<T> GetAsync(int id)
+        public virtual T Get(int id)
         {
-            return await _set.SingleOrDefaultAsync(t => t.ID == id);
+            return _set.Find(id);
         }
 
-        public async Task<T> UpdateAsync(T t)
+        public bool SaveChanges()
         {
-            var entity = _set.Update(t);
-            await _context.SaveChangesAsync();
-            return entity.Entity;
+            return _context.SaveChanges() > 0;
         }
     }
 }

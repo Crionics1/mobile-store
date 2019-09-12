@@ -34,9 +34,9 @@ namespace MobileStore.Repository.Repositories
             return query;
         }
 
-        public new async Task<MobilePhone> GetAsync(int id)
+        public override MobilePhone Get(int id)
         {
-            return await (_set.Include(s => s.Manufacturer).Include(s => s.Visuals)).SingleOrDefaultAsync(m => m.ID == id);
+            return _set.Include(s => s.Manufacturer).Include(s => s.Visuals).FirstOrDefault(m => m.ID == id);
         }
     }
 }
