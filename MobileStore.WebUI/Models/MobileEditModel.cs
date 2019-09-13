@@ -10,44 +10,49 @@ using System.Threading.Tasks;
 
 namespace MobileStore.WebUI.Models
 {
-    //public class MobileEditModel
-    //{
-    //    [Required]
-    //    public string Name { get; set; }
-    //    public IEnumerable<SelectListItem> Manufacturers { get;private set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string Size { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string Weight { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string DisplayResolution { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string Processor { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string Memory { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string Ram { get; set; }
-    //    [Required]
-    //    [MaxLength(50)]
-    //    public string OS { get; set; }
-    //    [Required]
-    //    public decimal Price { get; set; }
-    //    public IFormFile Thumbnail { get; set; }
-    //    public IEnumerable<IFormFile> Visuals { get; set; }
+    public class MobileEditModel
+    {
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Size { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Weight { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string DisplayResolution { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Processor { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Memory { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Ram { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string OS { get; set; }
+        [Required]
+        public decimal Price { get; set; }
+        public IFormFile Thumbnail { get; set; }
+        public IEnumerable<IFormFile> Visuals { get; set; }
 
-    //    public MobileEditModel(IEnumerable<Manufacturer> manufacturers)
-    //    {
-    //        Manufacturers = manufacturers.Select(m => new SelectListItem
-    //        {
-    //            Text = m.Name,
-    //            Value = m.ID.ToString()
-    //        });
-    //    }
-    //}
+        public IEnumerable<SelectListItem> Manufacturers { get; private set; }
+
+        public MobileEditModel()
+        {
+
+        }
+        public MobileEditModel(IEnumerable<Manufacturer> manufacturers)
+        {
+            Manufacturers = manufacturers.Select(m => new SelectListItem
+            {
+                Text = m.Name,
+                Value = m.ID.ToString()
+            });
+        }
+    }
 }
