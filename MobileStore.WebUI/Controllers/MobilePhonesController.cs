@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MobileStore.Domain.Entities;
 using MobileStore.Service.InterFaces;
+using MobileStore.WebUI.Models;
 using MobileStore.WebUI.Paging;
 
 namespace MobileStore.WebUI.Controllers
@@ -16,21 +17,22 @@ namespace MobileStore.WebUI.Controllers
             _visualService = visualService;
         }
 
-        public async Task<IActionResult> Index(string name, decimal? startPrice, decimal? endPrice, int manufacturerID, int page = 1)
+        public async Task<IActionResult> Index(MobileSearchModel mobileSearchModel, int page = 1)
         {
-            if (name == null && startPrice == null && endPrice == null && manufacturerID == 0)
+            if (mobileSearchModel == null)
             {
                 var items = _service.GetAll(true, true);
                 var model = await PaginatedList<MobilePhone>.CreateAsync(items, page, 6);
+
                 return View(model);
             }
 
-            ViewData["name"] = name;
-            ViewData["startPrice"] = startPrice;
-            ViewData["endPrice"] = endPrice;
-            ViewData["manufacturerID"] = manufacturerID;
+            ViewData["name"] = mobileSearchModel.Name;
+            ViewData["startPrice"] = mobileSearchModel.StartPrice;
+            ViewData["endPrice"] = mobileSearchModel.EndPrice;
+            ViewData["manufacturerID"] = mobileSearchModel.ManufacturerID;
 
-            var filteredItems = _service.Search(name, startPrice, endPrice, manufacturerID);
+            var filteredItems = _service.Search(mobileSearchModel.Name, mobileSearchModel.StartPrice, mobileSearchModel.EndPrice, mobileSearchModel.ManufacturerID);
             var filteredModel = await PaginatedList<MobilePhone>.CreateAsync(filteredItems, page, 6);
 
             return View("Index", filteredModel);

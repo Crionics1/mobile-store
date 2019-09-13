@@ -27,19 +27,19 @@
 
         <a asp-action="Index"
            asp-route-page="@(Model.PageIndex - 1)"
-           asp-route-name="@ViewData["name"]"
-           asp-route-startPrice="@ViewData["startPrice"]"
-           asp-route-endPrice="@ViewData["endPrice"]"
-           asp-route-manufacturerID="@ViewData["manufacturerID"]"
+           asp-route-Name="@ViewData["name"]"
+           asp-route-StartPrice="@ViewData["startPrice"]"
+           asp-route-EndPrice="@ViewData["endPrice"]"
+           asp-route-ManufacturerID="@ViewData["manufacturerID"]"
            class="btn btn-default @prevDisabled">
             Previous
         </a>
         <a asp-action="Index"
            asp-route-page="@(Model.PageIndex + 1)"
-           asp-route-name="@ViewData["name"]"
-           asp-route-startPrice="@ViewData["startPrice"]"
-           asp-route-endPrice="@ViewData["endPrice"]"
-           asp-route-manufacturerID="@ViewData["manufacturerID"]"
+           asp-route-Name="@ViewData["name"]"
+           asp-route-StartPrice="@ViewData["startPrice"]"
+           asp-route-EndPrice="@ViewData["endPrice"]"
+           asp-route-ManufacturerID="@ViewData["manufacturerID"]"
            class="btn btn-default @nextDisabled">
             Next
         </a>

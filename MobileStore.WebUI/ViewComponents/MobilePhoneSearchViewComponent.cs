@@ -9,7 +9,6 @@ namespace MobileStore.WebUI.ViewComponents
     public class MobilePhoneSearchViewComponent : ViewComponent
     {
         private IManufacturerService _manufacturerService;
-        [BindProperty]
         public MobileSearchModel MobileSearchModel { get; set; }
 
         public MobilePhoneSearchViewComponent(IManufacturerService manufacturerService)
